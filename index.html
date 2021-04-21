@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="style.css">
+		<script
+	  src="https://code.jquery.com/jquery-2.2.4.min.js"
+	  integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+	  crossorigin="anonymous"></script>
+	 <script>
+	 	$(document).ready(function(){
+	 		var p = [0]
+	 	$('.proba').click(function(){
+	 		$(this).prop('disabled', true);
+	 		$(this).addClass('green')
+	 		var b = $(this).attr('id')
+	 		
+	 			var a = Math.random()
+			 	a=a*11
+			 	a = Math.trunc(a)
+	 		
+	 		var i=0;
+	 		while(i<10000){
+	 			if (p[i]==a){
+	 			i=0
+	 			a = Math.random()
+			 	a=a*37
+			 	a = Math.trunc(a)
+	 			}
+	 			
+	 			i+=1
+	 		}
+	 		p.push(a)
+	 		p.push(b)
+	 		if (a==b){
+	 			alert("вы победили")
+	 		}else{
+	 			var g = a
+	 			String(g)
+	 			g="#"+g+""
+	 			$(g).addClass('red')
+	 			$(g).prop('disabled', true);
+	 		}
+
+	 	});
+	 	});
+	</script>
+</head>
+<body>
+	<div>
+	<button class="proba" id='1'>A1</button>
+	<button class="proba" id='2'>A2</button>
+	<button class="proba" id='3'>A3</button>
+	<button class="proba" id='4'>A4</button>
+	<button class="proba" id='5'>A5</button>
+	<button class="proba" id='6'>A6</button>
+	</div>
+	<div>
+	<button class="proba" id='7'>A1</button>
+	<button class="proba" id='8'>A2</button>
+	<button class="proba" id='9'>A3</button>
+	<button class="proba" id='10'>A4</button>
+	<button class="proba" id='11'>A5</button>
+	<button class="proba" id='12'>A6</button>
+	</div>
+		<div>
+	<button class="proba" id='13'>A1</button>
+	<button class="proba" id='14'>A2</button>
+	<button class="proba" id='15'>A3</button>
+	<button class="proba" id='16'>A4</button>
+	<button class="proba" id='17'>A5</button>
+	<button class="proba" id='18'>A6</button>
+	</div>
+		<div>
+	<button class="proba" id='19'>A1</button>
+	<button class="proba" id='20'>A2</button>
+	<button class="proba" id='21'>A3</button>
+	<button class="proba" id='22'>A4</button>
+	<button class="proba" id='23'>A5</button>
+	<button class="proba" id='24'>A6</button>
+	</div>
+		<div>
+	<button class="proba" id='25'>A1</button>
+	<button class="proba" id='36'>A2</button>
+	<button class="proba" id='27'>A3</button>
+	<button class="proba" id='28'>A4</button>
+	<button class="proba" id='29'>A5</button>
+	<button class="proba" id='30'>A6</button>
+	</div>
+		<div>
+	<button class="proba" id='31'>A1</button>
+	<button class="proba" id='32'>A2</button>
+	<button class="proba" id='33'>A3</button>
+	<button class="proba" id='34'>A4</button>
+	<button class="proba" id='35'>A5</button>
+	<button class="proba" id='36'>A6</button>
+	</div>
+</body>
+</html>
